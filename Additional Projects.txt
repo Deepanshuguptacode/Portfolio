@@ -1,0 +1,56 @@
+Project 1: Self-Correcting Multi-Agent System (Loop Engineering)
+Core Focus: Building a self-correcting agentic loop using LangGraph and Groq LLM instead of relying on "one-shot" responses.
+
+Objective: Automatically write, evaluate, and revise educational blog posts until they meet strict quality guidelines.
+
+Architecture & Agents:
+
+Writer Agent: Takes a user-provided topic (e.g., "Agentic AI") and generates an initial draft with beginner-friendly explanations, analogies, and code examples.
+
+Reviewer Agent (Verifier): Evaluates the draft against defined criteria (clarity, beginner friendliness, presence of analogies). Uses Pydantic to enforce structured JSON outputs (decision: pass/revise and feedback).
+
+Reviser Agent: Activated when decision == "revise". It ingests the reviewer’s feedback, refines the draft, and sends it back to the reviewer.
+
+Stopping Condition: A conditional edge in LangGraph breaks the loop when decision == "pass" or when revision_count >= max_revisions (e.g., capped at 2–5 iterations) to prevent infinite token consumption.
+
+UI & Backend: Delivered via a FastAPI backend with an interactive web interface displaying real-time revision attempts, feedback logs, and final refined answers.
+
+Project 2: Application-Level Verifier Loop with TestSprite (Bug-Fixing Loop)
+Core Focus: Integrating an external automated testing framework (TestSprite) as an application-level verifier for AI coding agents.
+
+Scenario: A Node.js/Vite e-commerce application ("Loop Checkout") containing a hidden logic bug in its discount system (applying a $2 flat discount instead of a 20% discount on a $100 cart).
+
+Workflow & Fix Cycle:
+
+Deployment: The web application is deployed live on Vercel.
+
+Automated Testing: TestSprite CLI scans the live URL, auto-generates a test plan (test_plan.json), executes browser-based end-to-end tests, records video/snapshots, and outputs a failure evidence bundle (test_sprite_failure/).
+
+AI Code Correction: The failure evidence bundle is fed directly into a coding agent (VS Code Copilot). The agent inspects the error logs, locates the bug in pricing.js (changing 0.02 to 0.20), applies the fix, and redeploys the app to Vercel.
+
+Verification: TestSprite re-executes the test suite against the updated live Vercel URL until a PASS status is confirmed.
+
+Project 3: Production Customer Support Harness System (Harness Engineering)
+Core Focus: Implementing Harness Engineering by surrounding LLM agents with deterministic safety guardrails, intent routing, specialized worker agents, state management, and tracing.
+
+Objective: Handle incoming customer support inquiries safely and accurately across multiple domains.
+
+Architecture & Components:
+
+Guardrails Node: A deterministic safety layer that inspects incoming queries for prompt injections, credential theft, or password/credit card requests. Unsafe queries are blocked immediately before reaching any LLM.
+
+Router Node: Classifies user queries into specific domains (Technical, Billing, or General) based on intent and keyword matching.
+
+Specialized Worker Agents:
+
+Technical Support Agent: Handles API errors, bugs, login failures, and installation queries.
+
+Billing Support Agent: Handles subscription pricing ($10 starter, $25 pro) and refund policy inquiries.
+
+General Support Agent: Answers broad questions about company services.
+
+Reviewer Agent: Performs a final quality check on the generated response before presenting it to the user.
+
+State Memory & Tracing: Tracks state (SupportState) across all agent interactions and logs the execution trace for observability.
+
+UI & Backend: Integrated into a FastAPI application with a multi-tab dashboard demonstrating query routing, guardrail interventions, and execution tracing.

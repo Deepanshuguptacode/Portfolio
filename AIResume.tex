@@ -1,0 +1,177 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabularx}{0.97\textwidth}[t]{X@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabularx}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabularx}{0.97\textwidth}[t]{X@{\extracolsep{\fill}}r}
+    \raggedright\small#1 & #2 \\
+  \end{tabularx}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    {\Huge \scshape Deepanshu Gupta} \\ \vspace{3pt}
+    \small
+    Delhi-NCR, India $|$
+    \href{mailto:deepanshugupta650@gmail.com}{\underline{deepanshugupta650@gmail.com}} $|$
+    +91-9358674187 \\ \vspace{2pt}
+    \href{https://linkedin.com/in/deepanshugupta650}{\underline{LinkedIn}} $|$
+    \href{https://github.com/deepanshuguptacode}{\underline{GitHub}} $|$
+    \href{https://takeuforward.org/profile/deepanshuguptacode/}{\underline{TakeUForward (DSA)}}
+\end{center}
+
+\vspace{-4pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{
+AI Engineer specializing in \textbf{Generative AI}, \textbf{LLM applications}, and \textbf{Agentic AI systems}. Experienced in \textbf{RAG pipelines}, \textbf{\mbox{multi-agent} workflows} (LangGraph, MCP), and production-grade \textbf{LLM backends} with guardrails and human-in-the-loop controls. \textbf{IEEE-published} researcher, \textbf{OCI Generative AI Professional}, strong in \textbf{DSA} and \textbf{backend engineering} (Python, Node.js).
+}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt]
+  \small
+  \item \textbf{Generative AI \& LLMs:} Large Language Models (Gemini, OpenAI-compatible APIs), Prompt Engineering, Structured Outputs, LLM Gateway, Embeddings, Explainable AI (XAI), InsightFace (Face Embeddings)
+  \item \textbf{RAG \& Retrieval:} RAG Pipelines, Document Loading, Chunking, Semantic Search, Vector Search, Reranking, Corrective RAG, Pinecone, Open Knowledge Format (OKF)
+  \item \textbf{Agentic AI:} LangGraph, LangChain, \mbox{Multi-Agent} Systems, Supervisor Pattern, Deep Agents, Tool Calling, Model Context Protocol (MCP), \mbox{Human-in-the-Loop} (HITL), Guardrails
+  \item \textbf{Backend \& APIs:} FastAPI, Node.js, Express.js, REST API Design, Microservices, \mbox{Event-Driven} Architecture, JWT Authentication, MongoDB, MySQL, Redis
+  \item \textbf{Tools \& DevOps:} Docker, Git, GitHub, Postman, AWS (Basics)
+  \item \textbf{Languages \& CS Core:} Python, JavaScript, C++, SQL, Java (Basics); DSA, OOP, DBMS
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Backend Developer - Internship}{Aug 2024 -- Feb 2025}
+      {Insturix (Tech Startup)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built the \textit{Content Analyzer} \textbf{AI module}, delivering \textbf{higher accuracy at lower cost} than existing market products.}
+        \resumeItem{Developed the \textbf{AI orchestration layer} for \textbf{Gemini LLM} calls using \textbf{\mbox{event-driven} design}, boosting throughput \textbf{25\%}.}
+        \resumeItem{Automated \textbf{Gemini API key rotation}, cutting rate-limit failures by \textbf{40\%} and sustaining \textbf{98.2\% uptime}.}
+        \resumeItem{Optimized \textbf{MongoDB} schemas and indexing for AI-generated data, cutting retrieval time by \textbf{30\%}.}
+      \resumeItemListEnd
+\vspace{2pt}
+    \resumeSubheading
+  {Backend Developer}{Feb 2025 -- Apr 2025}
+  {Rubaroo -- Annual Cultural Fest}{SRM IST}
+  \resumeItemListStart
+    \resumeItem{Built \textbf{Express.js} + \textbf{JWT} backend for \textbf{500+ participants} with REST APIs at \textbf{1,000+ requests/day}, $<$\textbf{200ms}.}
+    \resumeItem{Cut integration bugs by \textbf{25\%} through type-safe API contracts with the frontend team.}
+  \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS & PUBLICATIONS-----------
+\section{Projects \& Publications}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{VoxVeritas: Hybrid Crowd-AI Misinformation Verification [IEEE Published]} \href{https://www.voxveritas.tech}{\underline{[Platform]}} \href{https://ieeexplore.ieee.org/document/11565047}{\underline{[IEEE Xplore]}} \\
+      \emph{Gemini API, RAG, Pinecone, InsightFace, Express.js, MongoDB}}{}
+      \resumeItemListStart
+        \resumeItem{Co-authored an \textbf{IEEE-published paper} (ICICI-2026) on a hybrid crowd--AI architecture for misinformation verification, covering end-to-end \textbf{LLM system design}.}
+        \resumeItem{Developed an \textbf{Explainable AI (XAI)} pipeline using \textbf{Gemini} and \textbf{vector embeddings} to semantically cluster and pair opposing arguments via \textbf{semantic search} on Pinecone.}
+        \resumeItem{Implemented a \textbf{\mbox{Sybil-resistant}} One-Person-One-Vote system using \textbf{face embeddings (InsightFace)}, reducing bot activity.}
+      \resumeItemListEnd
+\vspace{2pt}
+    \resumeProjectHeading
+      {\textbf{\mbox{Multi-Agent} Travel Planner} \\
+      \emph{LangGraph, MCP, FastAPI, Agentic AI, HITL, Guardrails}}{}
+      \resumeItemListStart
+        \resumeItem{Built a \textbf{\mbox{multi-agent} system} in \textbf{LangGraph} with a \textbf{Supervisor} agent orchestrating specialized sub-agents and \textbf{tool calling}.}
+        \resumeItem{Designed input \textbf{Guardrails} and \textbf{\mbox{Human-in-the-Loop} (HITL)} approval endpoints for safe, reviewable AI plan generation.}
+        \resumeItem{Developed a \textbf{FastAPI} backend with custom \textbf{MCP servers} exposing live weather, hotel, and flight data as agent tools.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+  {SRM Institute of Science and Technology}{Delhi-NCR, India}
+  {B.Tech in Computer Science and Engineering (AIML) $|$ CGPA: 9.44 (10.0 SGPA in Sem 3)}{Jul 2023 -- 2027 (Expected)}
+
+\resumeSubheading
+  {Guru Tegh Bahadur Public School}{Meerut, India}
+  {CBSE Class XII: 82.4\% (2023) $|$ Class X: 94.5\% (2021)}{2021 -- 2023}
+  \resumeSubHeadingListEnd
+
+\section{Certifications \& Achievements}
+  \resumeItemListStart
+    \resumeItem{Earned \textbf{Oracle Cloud Infrastructure 2025 Certified Generative AI Professional} \href{https://catalog-education.oracle.com/pls/certview/sharebadge?id=D1697C217E86DB7066CA74B71878189E83443397D52319E28D755FB68BBC4DCE}{\underline{[Link]}}}
+    \resumeItem{Completed Backend Development Course -- Physics Wallah (PW Skills) \href{https://pwskills.com/learn/certificate/c4ace320-e0d1-4858-ba31-304f4e119866/}{\underline{[Link]}}}
+    \resumeItem{Solved \textbf{400+ DSA problems} on LeetCode / TakeUForward \href{https://takeuforward.org/profile/deepanshuguptacode}{\underline{[Link]}}}
+  \resumeItemListEnd
+
+%-----------LEADERSHIP & ACTIVITIES-----------
+\section{Leadership \& Activities}
+  \resumeItemListStart
+    \resumeItem{Led a team at \textbf{HackStasy} (Microsoft Azure Hackathon) to build an \textbf{AI chatbot} for student well-being; \textbf{Top 5}.}
+    \resumeItem{Led backend integration as \textbf{Web Developer \& Core Member} of \textbf{HackHound} (SRM IST); mentored \textbf{3 juniors}.}
+  \resumeItemListEnd
+
+\end{document}

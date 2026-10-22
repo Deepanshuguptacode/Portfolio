@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepanshu Gupta — AI Engineer & Agentic AI Specialist</title>
+  <meta name="description" content="Portfolio of Deepanshu Gupta — AI Engineer specializing in Generative AI, LLM applications, Agentic AI systems, RAG pipelines, and multi-agent workflows. IEEE-published researcher and OCI Generative AI Professional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Theme Switcher Colors injected by JS -->
+</head>
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">DG</div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <p class="loader-text">Initializing AI System...</p>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>DG<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- Theme Switcher (Sequential Toggle) -->
+      <div class="theme-switcher" id="themeSwitcher">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cycle color theme" title="Theme: Indigo Cosmos (Click to switch)">
+          <i class="fas fa-palette"></i>
+          <span class="theme-badge-dot" id="themeBadgeDot"></span>
+        </button>
+      </div>
+
+      <!-- Theme Toast Notification -->
+      <div class="theme-toast" id="themeToast" aria-live="polite"></div>
+
+      <!-- Resume Dropdown -->
+      <div class="resume-dropdown" id="resumeDropdown">
+        <button class="btn btn-primary nav-cta resume-trigger" id="resumeTrigger">
+          <i class="fas fa-file-alt"></i> Resume <i class="fas fa-chevron-down resume-chevron"></i>
+        </button>
+        <div class="resume-menu" id="resumeMenu">
+          <a href="https://drive.google.com/file/d/1e460XeyVys7kwiIqdDJGY84i5JlRn33x/view?usp=sharing" target="_blank" class="resume-menu-item">
+            <i class="fas fa-eye"></i>
+            <div>
+              <span class="rmenu-title">View Resume</span>
+              <span class="rmenu-sub">Open in Google Drive</span>
+            </div>
+          </a>
+          <a href="https://drive.google.com/uc?export=download&id=1e460XeyVys7kwiIqdDJGY84i5JlRn33x" target="_blank" class="resume-menu-item">
+            <i class="fas fa-download"></i>
+            <div>
+              <span class="rmenu-title">Download PDF</span>
+              <span class="rmenu-sub">Save to your device</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-bg-grid"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">
+          <span class="badge-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+        <h1 class="hero-title reveal-up">
+          Hi, I'm <span class="text-gradient">Deepanshu</span><br />
+          <span class="hero-subtitle-role">Gupta</span>
+        </h1>
+        <div class="hero-role reveal-up">
+          <span class="role-prefix">AI Engineer &amp;</span>
+          <div class="role-cycler">
+            <span class="role-item active">Agentic AI Specialist</span>
+            <span class="role-item">LLM Applications Builder</span>
+            <span class="role-item">RAG Pipeline Engineer</span>
+            <span class="role-item">IEEE Published Researcher</span>
+          </div>
+        </div>
+        <p class="hero-desc reveal-up">
+          I architect intelligent systems — from multi-agent workflows and RAG pipelines 
+          to production-grade LLM backends with guardrails. Turning complex AI research 
+          into elegant, reliable solutions.
+        </p>
+        <div class="hero-actions reveal-up">
+          <a href="#projects" class="btn btn-primary btn-glow">
+            <i class="fas fa-rocket"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+        </div>
+        <div class="hero-socials reveal-up">
+          <a href="https://linkedin.com/in/deepanshugupta650" target="_blank" aria-label="LinkedIn" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/deepanshuguptacode" target="_blank" aria-label="GitHub" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:deepanshugupta650@gmail.com" aria-label="Email" class="social-icon">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://takeuforward.org/profile/deepanshuguptacode/" target="_blank" aria-label="TakeUForward" class="social-icon">
+            <i class="fas fa-code"></i>
+          </a>
+        </div>
+        <div class="hero-tag reveal-up">
+          <span class="tag-icon"><i class="fas fa-microchip"></i></span>
+          <span>Building the Future with AI</span>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal-right">
+        <div class="hero-image-ring ring-1"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-image-ring ring-3"></div>
+        <div class="hero-image-frame">
+          <img src="profile.png" alt="Deepanshu Gupta - AI Engineer" class="hero-profile-img" />
+        </div>
+        <div class="hero-float-card card-1">
+          <i class="fas fa-brain"></i>
+          <span>Agentic AI</span>
+        </div>
+        <div class="hero-float-card card-2">
+          <i class="fas fa-certificate"></i>
+          <span>IEEE Published</span>
+        </div>
+        <div class="hero-float-card card-3">
+          <i class="fas fa-shield-halved"></i>
+          <span>OCI Certified</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== STATS RIBBON ===== -->
+  <section class="stats-ribbon">
+    <div class="stats-container">
+      <div class="stat-item reveal-up">
+        <div class="stat-number" data-count="400">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">DSA Problems Solved</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up">
+        <div class="stat-number" data-count="9">0</div>
+        <div class="stat-suffix">.44</div>
+        <div class="stat-label">CGPA at SRM IST</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up">
+        <div class="stat-number" data-count="5">0</div>
+        <div class="stat-suffix">+</div>
+        <div class="stat-label">AI Projects Built</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal-up">
+        <div class="stat-number" data-count="1">0</div>
+        <div class="stat-suffix"></div>
+        <div class="stat-label">IEEE Publication</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">GET TO KNOW ME</span>
+        <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col reveal-left">
+          <div class="about-image-wrapper">
+            <div class="about-img-bg"></div>
+            <img src="profile.png" alt="Deepanshu Gupta" class="about-img" />
+            <div class="about-experience-badge">
+              <span class="exp-number">9.44</span>
+              <span class="exp-label">CGPA</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content-col reveal-right">
+          <h3 class="about-name">Deepanshu Gupta</h3>
+          <p class="about-role-label">AI Engineer · IEEE Researcher · Backend Developer</p>
+          <p class="about-bio">
+            I'm an AI Engineering student at <strong>SRM IST</strong>, specializing in building 
+            production-grade intelligent systems. My work spans from architecting 
+            <strong>multi-agent LangGraph workflows</strong> with safety guardrails to 
+            designing <strong>RAG pipelines</strong> with semantic search and reranking.
+          </p>
+          <p class="about-bio">
+            As a co-author of an <strong>IEEE-published paper</strong> (ICICI-2026) on hybrid 
+            crowd-AI misinformation verification, I bridge academic rigor with real-world engineering. 
+            I'm an <strong>OCI Generative AI Professional</strong> with hands-on experience 
+            building AI products in production environments.
+          </p>
+          <div class="about-info-grid">
+            <div class="about-info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="info-label">Location</span>
+                <span class="info-value">Delhi-NCR, India</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="info-label">Degree</span>
+                <span class="info-value">B.Tech CSE (AIML), 2027</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="info-label">Email</span>
+                <span class="info-value">deepanshugupta650@gmail.com</span>
+              </div>
+            </div>
+            <div class="about-info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="info-label">Phone</span>
+                <span class="info-value">+91-9358674187</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-actions">
+            <a href="https://drive.google.com/file/d/1e460XeyVys7kwiIqdDJGY84i5JlRn33x/view?usp=sharing" target="_blank" class="btn btn-primary">
+              <i class="fas fa-eye"></i> View Resume
+            </a>
+            <a href="https://ieeexplore.ieee.org/document/11565047" target="_blank" class="btn btn-outline">
+              <i class="fas fa-book-open"></i> IEEE Paper
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="skills">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">TECHNICAL EXPERTISE</span>
+        <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+        <p class="section-desc">A curated stack of technologies I use to build intelligent, production-ready AI systems.</p>
+      </div>
+
+      <div class="skills-categories reveal-up">
+        <button class="skills-filter active" data-filter="all">All</button>
+        <button class="skills-filter" data-filter="ai">Generative AI</button>
+        <button class="skills-filter" data-filter="backend">Backend</button>
+        <button class="skills-filter" data-filter="tools">Tools</button>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Generative AI & LLMs -->
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#6366f1">
+            <i class="fas fa-robot"></i>
+          </div>
+          <span class="skill-name">LLMs</span>
+          <span class="skill-sub">Gemini, OpenAI APIs</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#8b5cf6">
+            <i class="fas fa-comment-dots"></i>
+          </div>
+          <span class="skill-name">Prompt Engineering</span>
+          <span class="skill-sub">Structured Outputs, XAI</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#06b6d4">
+            <i class="fas fa-database"></i>
+          </div>
+          <span class="skill-name">RAG Pipelines</span>
+          <span class="skill-sub">Pinecone, Semantic Search</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#3b82f6">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <span class="skill-name">LangGraph</span>
+          <span class="skill-sub">Multi-Agent Workflows</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#10b981">
+            <i class="fas fa-link"></i>
+          </div>
+          <span class="skill-name">LangChain</span>
+          <span class="skill-sub">Tool Calling, Chains</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#f59e0b">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <span class="skill-name">Guardrails & HITL</span>
+          <span class="skill-sub">Human-in-the-Loop</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#ec4899">
+            <i class="fas fa-plug"></i>
+          </div>
+          <span class="skill-name">MCP</span>
+          <span class="skill-sub">Model Context Protocol</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="ai">
+          <div class="skill-icon-wrap" style="--clr:#14b8a6">
+            <i class="fas fa-vector-square"></i>
+          </div>
+          <span class="skill-name">Embeddings</span>
+          <span class="skill-sub">InsightFace, Reranking</span>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#22c55e">
+            <i class="fab fa-python"></i>
+          </div>
+          <span class="skill-name">Python</span>
+          <span class="skill-sub">Core Language</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#f97316">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <span class="skill-name">FastAPI</span>
+          <span class="skill-sub">REST API Design</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#84cc16">
+            <i class="fab fa-node-js"></i>
+          </div>
+          <span class="skill-name">Node.js</span>
+          <span class="skill-sub">Express.js, REST APIs</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#22d3ee">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <span class="skill-name">MongoDB</span>
+          <span class="skill-sub">NoSQL, Schemas</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#ef4444">
+            <i class="fas fa-server"></i>
+          </div>
+          <span class="skill-name">Redis</span>
+          <span class="skill-sub">Caching, Sessions</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#3b82f6">
+            <i class="fas fa-table"></i>
+          </div>
+          <span class="skill-name">MySQL</span>
+          <span class="skill-sub">Relational DB, SQL</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#a78bfa">
+            <i class="fas fa-code"></i>
+          </div>
+          <span class="skill-name">C++ / Java</span>
+          <span class="skill-sub">DSA, OOP</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="backend">
+          <div class="skill-icon-wrap" style="--clr:#fb923c">
+            <i class="fas fa-key"></i>
+          </div>
+          <span class="skill-name">JWT Auth</span>
+          <span class="skill-sub">Microservices, Security</span>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-card reveal-up" data-category="tools">
+          <div class="skill-icon-wrap" style="--clr:#2563eb">
+            <i class="fab fa-docker"></i>
+          </div>
+          <span class="skill-name">Docker</span>
+          <span class="skill-sub">Containerization</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="tools">
+          <div class="skill-icon-wrap" style="--clr:#f97316">
+            <i class="fab fa-git-alt"></i>
+          </div>
+          <span class="skill-name">Git & GitHub</span>
+          <span class="skill-sub">Version Control</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="tools">
+          <div class="skill-icon-wrap" style="--clr:#ff6c37">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <span class="skill-name">Postman</span>
+          <span class="skill-sub">API Testing</span>
+        </div>
+        <div class="skill-card reveal-up" data-category="tools">
+          <div class="skill-icon-wrap" style="--clr:#f59e0b">
+            <i class="fab fa-aws"></i>
+          </div>
+          <span class="skill-name">AWS</span>
+          <span class="skill-sub">Cloud Basics</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="experience">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">WORK HISTORY</span>
+        <h2 class="section-title">Experience &amp; <span class="text-gradient">Education</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Backend Developer — Internship</h3>
+                <p class="timeline-company"><i class="fas fa-building"></i> Insturix (Tech Startup) · Remote</p>
+              </div>
+              <span class="timeline-date">Aug 2024 – Feb 2025</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="tag">Gemini LLM</span>
+              <span class="tag">Event-Driven</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built the <strong>Content Analyzer AI module</strong>, delivering higher accuracy at lower cost than existing market products.</li>
+              <li>Developed AI orchestration layer for <strong>Gemini LLM calls</strong> using event-driven design, boosting throughput by <strong>25%</strong>.</li>
+              <li>Automated <strong>Gemini API key rotation</strong>, cutting rate-limit failures by <strong>40%</strong> and sustaining <strong>98.2% uptime</strong>.</li>
+              <li>Optimized <strong>MongoDB schemas</strong> and indexing for AI-generated data, cutting retrieval time by <strong>30%</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Backend Developer</h3>
+                <p class="timeline-company"><i class="fas fa-university"></i> Rubaroo — Annual Cultural Fest · SRM IST</p>
+              </div>
+              <span class="timeline-date">Feb – Apr 2025</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="tag">Express.js</span>
+              <span class="tag">JWT Auth</span>
+              <span class="tag">REST APIs</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Built <strong>Express.js + JWT</strong> backend handling <strong>500+ participants</strong> with REST APIs at 1,000+ requests/day under 200ms.</li>
+              <li>Cut integration bugs by <strong>25%</strong> through type-safe API contracts with the frontend team.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">B.Tech — Computer Science & Engineering (AIML)</h3>
+                <p class="timeline-company"><i class="fas fa-school"></i> SRM Institute of Science and Technology · Delhi-NCR</p>
+              </div>
+              <span class="timeline-date">Jul 2023 – 2027</span>
+            </div>
+            <div class="timeline-tags">
+              <span class="tag">CGPA: 9.44</span>
+              <span class="tag">10.0 SGPA Sem 3</span>
+              <span class="tag">AIML Specialization</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Specializing in <strong>Artificial Intelligence and Machine Learning</strong> with a strong foundation in CS fundamentals.</li>
+              <li>Achieved <strong>10.0 SGPA in Semester 3</strong>, maintaining overall CGPA of 9.44.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="projects">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">MY WORK</span>
+        <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+        <p class="section-desc">Production-grade AI systems designed with scalability, safety, and real-world impact in mind.</p>
+      </div>
+
+      <div class="projects-filter reveal-up">
+        <button class="proj-filter active" data-pfilter="all">All</button>
+        <button class="proj-filter" data-pfilter="agentic">Agentic AI</button>
+        <button class="proj-filter" data-pfilter="rag">RAG & LLMs</button>
+        <button class="proj-filter" data-pfilter="backend">Backend</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- VoxVeritas -->
+        <div class="project-card featured reveal-up" data-ptag="rag">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://www.voxveritas.tech" target="_blank" class="proj-link" title="Live Platform"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://ieeexplore.ieee.org/document/11565047" target="_blank" class="proj-link" title="IEEE Paper"><i class="fas fa-book"></i></a>
+            </div>
+          </div>
+          <div class="project-badge-inline">
+            <i class="fas fa-certificate"></i> IEEE Published
+          </div>
+          <h3 class="project-title">VoxVeritas</h3>
+          <p class="project-subtitle">Hybrid Crowd-AI Misinformation Verification</p>
+          <p class="project-desc">
+            Co-authored an IEEE paper (ICICI-2026) on a novel hybrid architecture combining crowd intelligence with AI for misinformation verification. Features an <strong>Explainable AI pipeline</strong>, face-embedding based Sybil-resistance, and semantic argument clustering via <strong>Pinecone vector search</strong>.
+          </p>
+          <div class="project-tech">
+            <span>Gemini API</span><span>RAG</span><span>Pinecone</span><span>InsightFace</span><span>Express.js</span><span>MongoDB</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://www.voxveritas.tech" target="_blank" class="btn btn-outline proj-action-btn">
+              <i class="fas fa-external-link-alt"></i> Live Platform
+            </a>
+            <a href="https://ieeexplore.ieee.org/document/11565047" target="_blank" class="btn btn-primary proj-action-btn">
+              <i class="fas fa-book"></i> IEEE Paper
+            </a>
+          </div>
+        </div>
+
+        <!-- Multi-Agent Travel Planner -->
+        <div class="project-card reveal-up" data-ptag="agentic">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="fas fa-plane-departure"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/deepanshuguptacode" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Multi-Agent Travel Planner</h3>
+          <p class="project-subtitle">Agentic AI with HITL &amp; Guardrails</p>
+          <p class="project-desc">
+            A sophisticated <strong>LangGraph multi-agent system</strong> where a Supervisor agent orchestrates specialized sub-agents for real-time travel planning. Features <strong>Human-in-the-Loop (HITL)</strong> approval flows, safety guardrails, and custom <strong>MCP servers</strong> exposing live weather, hotel, and flight data.
+          </p>
+          <div class="project-tech">
+            <span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>HITL</span><span>Guardrails</span>
+          </div>
+        </div>
+
+        <!-- Self-Correcting Multi-Agent -->
+        <div class="project-card reveal-up" data-ptag="agentic">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="fas fa-rotate"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/deepanshuguptacode" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Self-Correcting Multi-Agent Loop</h3>
+          <p class="project-subtitle">Loop Engineering with LangGraph &amp; Groq</p>
+          <p class="project-desc">
+            Engineered an autonomous agentic loop with <strong>Writer → Reviewer → Reviser</strong> agents using LangGraph. The system automatically evaluates drafts against strict quality criteria (clarity, accuracy, completeness) and iterates until quality thresholds are met — preventing infinite loops with smart stopping conditions.
+          </p>
+          <div class="project-tech">
+            <span>LangGraph</span><span>Groq LLM</span><span>FastAPI</span><span>Pydantic</span>
+          </div>
+        </div>
+
+        <!-- Bug-Fixing Loop -->
+        <div class="project-card reveal-up" data-ptag="agentic">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="fas fa-bug-slash"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/deepanshuguptacode" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Bug-Fixing Verifier Loop</h3>
+          <p class="project-subtitle">Application-Level Verification with TestSprite</p>
+          <p class="project-desc">
+            Integrated <strong>TestSprite</strong> as an automated application-level verifier for AI coding agents. The system deploys a live e-commerce app on Vercel, runs browser-based E2E tests, feeds failure evidence to an AI coding agent, and autonomously verifies the fix — completing a full <strong>deploy-test-fix-verify</strong> loop.
+          </p>
+          <div class="project-tech">
+            <span>TestSprite</span><span>Node.js</span><span>Vercel</span><span>Vite</span><span>AI Agents</span>
+          </div>
+        </div>
+
+        <!-- Customer Support Harness -->
+        <div class="project-card reveal-up" data-ptag="agentic">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/deepanshuguptacode" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Production Customer Support Harness</h3>
+          <p class="project-subtitle">Harness Engineering with Safety Guardrails</p>
+          <p class="project-desc">
+            Architected a production-grade AI support system with <strong>deterministic safety guardrails</strong> blocking prompt injections and credential theft before any LLM call. Features intelligent intent routing to specialized agents (Technical, Billing, General) with full <strong>state tracking and execution tracing</strong>.
+          </p>
+          <div class="project-tech">
+            <span>LangGraph</span><span>FastAPI</span><span>Guardrails</span><span>State Management</span>
+          </div>
+        </div>
+
+        <!-- Content Analyzer (Insturix) -->
+        <div class="project-card reveal-up" data-ptag="backend">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon-wrap">
+              <i class="fas fa-magnifying-glass-chart"></i>
+            </div>
+            <div class="project-links">
+              <a href="https://linkedin.com/in/deepanshugupta650" target="_blank" class="proj-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Content Analyzer AI Module</h3>
+          <p class="project-subtitle">Production AI at Insturix</p>
+          <p class="project-desc">
+            Built a production-deployed AI content analysis module for Insturix that outperforms market competitors in accuracy-to-cost ratio. Designed an <strong>event-driven orchestration layer</strong> for Gemini LLM, automated API key rotation achieving <strong>98.2% uptime</strong>, and optimized MongoDB for a <strong>30% retrieval speed gain</strong>.
+          </p>
+          <div class="project-tech">
+            <span>Gemini LLM</span><span>Node.js</span><span>MongoDB</span><span>Event-Driven</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS & ACHIEVEMENTS ===== -->
+  <section id="certifications" class="certifications">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">CREDENTIALS</span>
+        <h2 class="section-title">Certifications &amp; <span class="text-gradient">Achievements</span></h2>
+      </div>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal-up">
+          <div class="cert-icon" style="--clr:#f59e0b">
+            <i class="fas fa-award"></i>
+          </div>
+          <div class="cert-content">
+            <h4>OCI Generative AI Professional</h4>
+            <p>Oracle Cloud Infrastructure 2025 — Certified</p>
+          </div>
+          <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=D1697C217E86DB7066CA74B71878189E83443397D52319E28D755FB68BBC4DCE" target="_blank" class="cert-link">
+            <i class="fas fa-arrow-up-right-from-square"></i> View Badge
+          </a>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-icon" style="--clr:#6366f1">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="cert-content">
+            <h4>IEEE Published Researcher</h4>
+            <p>ICICI-2026 — VoxVeritas Paper on IEEE Xplore</p>
+          </div>
+          <a href="https://ieeexplore.ieee.org/document/11565047" target="_blank" class="cert-link">
+            <i class="fas fa-arrow-up-right-from-square"></i> View Paper
+          </a>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-icon" style="--clr:#22c55e">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Backend Development Certification</h4>
+            <p>Physics Wallah (PW Skills) — Full Course</p>
+          </div>
+          <a href="https://pwskills.com/learn/certificate/c4ace320-e0d1-4858-ba31-304f4e119866/" target="_blank" class="cert-link">
+            <i class="fas fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-icon" style="--clr:#06b6d4">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="cert-content">
+            <h4>400+ DSA Problems Solved</h4>
+            <p>LeetCode / TakeUForward — Consistent Practice</p>
+          </div>
+          <a href="https://takeuforward.org/profile/deepanshuguptacode" target="_blank" class="cert-link">
+            <i class="fas fa-arrow-up-right-from-square"></i> View Profile
+          </a>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-icon" style="--clr:#ec4899">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div class="cert-content">
+            <h4>HackStasy — Top 5 Finish</h4>
+            <p>Microsoft Azure Hackathon — Led AI Chatbot team</p>
+          </div>
+          <a href="https://linkedin.com/in/deepanshugupta650" target="_blank" class="cert-link">
+            <i class="fas fa-arrow-up-right-from-square"></i> View Profile
+          </a>
+        </div>
+
+        <div class="cert-card reveal-up">
+          <div class="cert-icon" style="--clr:#f97316">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Web Developer & Core Member</h4>
+            <p>HackHound (SRM IST) — Mentored 3 juniors</p>
+          </div>
+          <a href="https://linkedin.com/in/deepanshugupta650" target="_blank" class="cert-link">
+            <i class="fas fa-arrow-up-right-from-square"></i> LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact">
+    <div class="section-container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="section-desc">Whether it's a project collaboration, internship opportunity, or just a conversation about AI — I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-info-item">
+            <div class="contact-icon-wrap">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:deepanshugupta650@gmail.com" class="contact-value">deepanshugupta650@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-wrap">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+91-9358674187</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-wrap">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Delhi-NCR, India</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <span class="contact-label">Follow Me</span>
+            <div class="contact-social-links">
+              <a href="https://linkedin.com/in/deepanshugupta650" target="_blank" class="contact-social-icon" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/deepanshuguptacode" target="_blank" class="contact-social-icon" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://takeuforward.org/profile/deepanshuguptacode/" target="_blank" class="contact-social-icon" aria-label="TakeUForward">
+                <i class="fas fa-code"></i>
+              </a>
+              <a href="https://ieeexplore.ieee.org/document/11565047" target="_blank" class="contact-social-icon" aria-label="IEEE">
+                <i class="fas fa-book-open"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name</label>
+              <input type="text" id="contactName" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Your Email</label>
+              <input type="email" id="contactEmail" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" placeholder="Project collaboration / Internship / Say Hi" />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="cta-bg-orbs">
+      <div class="cta-orb orb-1"></div>
+      <div class="cta-orb orb-2"></div>
+    </div>
+    <div class="cta-content reveal-up">
+      <h2>Ready to Build Something Intelligent?</h2>
+      <p>Let's craft AI systems that solve real problems and create real value.</p>
+      <a href="#contact" class="btn btn-primary btn-glow btn-lg">
+        <i class="fas fa-rocket"></i> Start a Conversation
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <span class="logo-bracket">&lt;</span>DG<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>AI Engineer specializing in Generative AI, Agentic Systems, and LLM Applications. Building intelligent solutions for tomorrow.</p>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-links-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="https://linkedin.com/in/deepanshugupta650" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/deepanshuguptacode" target="_blank">GitHub</a></li>
+              <li><a href="https://takeuforward.org/profile/deepanshuguptacode/" target="_blank">TakeUForward</a></li>
+              <li><a href="https://ieeexplore.ieee.org/document/11565047" target="_blank">IEEE Xplore</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Deepanshu Gupta. All rights reserved.</p>
+        <p>Designed &amp; Built with passion for AI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
