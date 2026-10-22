@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Neural Pathway Not Found | Deepanshu Gupta</title>
+  <meta name="description" content="404 - The requested neural route does not exist on Deepanshu Gupta's AI portfolio." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .not-found-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      background: radial-gradient(ellipse 80% 60% at 50% 30%, rgba(99, 102, 241, 0.12), transparent 70%), var(--bg-main, #0a0b10);
+      position: relative;
+      overflow: hidden;
+      color: var(--text-primary, #ffffff);
+      font-family: 'Inter', sans-serif;
+    }
+    .not-found-card {
+      max-width: 580px;
+      width: 100%;
+      background: rgba(14, 16, 25, 0.75);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.15);
+      position: relative;
+      z-index: 2;
+    }
+    .not-found-code {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(5rem, 12vw, 7.5rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #6366f1 0%, #06b6d4 50%, #f43f5e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -2px;
+      text-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+    }
+    .not-found-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      color: #06b6d4;
+      margin-bottom: 1.5rem;
+    }
+    .not-found-tag .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #f43f5e;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #f43f5e;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    .not-found-desc {
+      color: var(--text-secondary, #94a3b8);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .not-found-terminal {
+      background: rgba(6, 8, 14, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 1rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      text-align: left;
+      color: #94a3b8;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .not-found-terminal .term-err {
+      color: #f43f5e;
+    }
+    .not-found-terminal .term-path {
+      color: #06b6d4;
+    }
+    .not-found-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-return {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.8rem;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: #ffffff;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-return:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+    }
+    .btn-secondary-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.8rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border-radius: 999px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .btn-secondary-link:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="not-found-page">
+  <div class="not-found-card">
+    <div class="not-found-code">404</div>
+    <div class="not-found-tag">
+      <span class="pulse-dot"></span>
+      <span>ERROR: NEURAL_PATHWAY_UNRESOLVED</span>
+    </div>
+    <div class="not-found-terminal">
+      <div>&gt; query_vector_space --route active</div>
+      <div class="term-err">&gt; [Exception] 404: Node address not mapped to current model topology.</div>
+      <div>&gt; rerouting to base cluster: <span class="term-path">/home</span></div>
+    </div>
+    <p class="not-found-desc">
+      The neural endpoint you navigated to does not exist, has been re-indexed, or is currently offline. Let's redirect you back to the main system.
+    </p>
+    <div class="not-found-actions">
+      <a href="/" class="btn-return">
+        <i class="fas fa-arrow-left"></i> Return to Portfolio
+      </a>
+      <a href="/#projects" class="btn-secondary-link">
+        <i class="fas fa-code-branch"></i> View Projects
+      </a>
+    </div>
+  </div>
+</body>
+</html>

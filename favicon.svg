@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b10"/>
+      <stop offset="100%" stop-color="#141829"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#bgGrad)" stroke="url(#accentGrad)" stroke-width="2"/>
+
+  <!-- Glowing Accent Dots / AI Nodes -->
+  <circle cx="10" cy="10" r="2" fill="#06b6d4" opacity="0.8"/>
+  <circle cx="54" cy="54" r="2" fill="#6366f1" opacity="0.8"/>
+
+  <!-- DG Monogram with Brackets -->
+  <g filter="url(#glow)">
+    <text x="32" y="39" 
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" 
+          font-size="22" 
+          font-weight="800" 
+          letter-spacing="-0.5" 
+          text-anchor="middle" 
+          fill="#ffffff">
+      DG
+    </text>
+  </g>
+  <text x="14" y="38" 
+        font-family="'JetBrains Mono', monospace, Consolas, sans-serif" 
+        font-size="16" 
+        font-weight="700" 
+        text-anchor="middle" 
+        fill="#06b6d4" 
+        opacity="0.9">&lt;</text>
+  <text x="50" y="38" 
+        font-family="'JetBrains Mono', monospace, Consolas, sans-serif" 
+        font-size="16" 
+        font-weight="700" 
+        text-anchor="middle" 
+        fill="#6366f1" 
+        opacity="0.9">&gt;</text>
+</svg>
